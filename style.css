@@ -2,13 +2,13 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: hwb(222 50% 40%);
+    background-color: rgb(110, 108, 131);
     border-radius: 8px;
     border-color: rgb(117, 2, 119);
     border-color: blueviolet;
 }
-
-buttons {
-
+/*
+.Botones {
+    display: ;
 
 }
