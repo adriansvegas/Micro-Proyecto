@@ -38,3 +38,19 @@ body {
 
 .button:hover img {
     transform: scale(1.1); }
+
+.button:active img {
+        filter: brightness(1.2);
+    }
+
+.Imagen{
+    width: 100%; 
+    height: 100%;
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 20%; 
+    transition: transform 0.2s; 
+}
+
+.Imagen:hover img {
+    transform: scale(1.1); }
