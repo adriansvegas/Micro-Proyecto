@@ -5,7 +5,27 @@
     <link rel ="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hola Mundo</h1>
+    <div class="container">
+        <h1> Simons Says</h1>
+        <div id="Menu">
+            <input type="text" id="Player" placeholder="Ingresa tu nombre: " />
+            <button id="Start"> Iniciar Juego</button>
+        </div>
+        <div id="Juego" class="Escondido">
+            <div class="Botones">
+                <div class="Boton red" id="red"></div>
+                <div class="Boton amarillo" id="amarillo"></div>
+                <div class="Boton azul" id="azul"></div>
+                <div class="Boton verde" id="verde"></div>
+            </div>
+            <div id="Marcador">
+                <h2> Puntuacion: <span id="Marcador actual">0</span></h2>
+                <h2> Mejor Puntaje: <span id="Mejor Marcador">0</span></h2>
+            </div>
+            <button id="reinicio" class="Escondido"> Reiniciar Juego</button>
+        </div>
+    </div>
     
 </body>
+<script src="main.js"></script>
 </html>
