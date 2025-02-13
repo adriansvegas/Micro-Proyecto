@@ -1,11 +1,16 @@
+body {
+    background-color: #121111;
+}
+
+
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgb(1, 0, 10);
+    background-color: rgb(255, 255, 255);
     border-radius: 8px;
-    border-color: rgb(117, 2, 119);
-    border-color: blueviolet;
+    border: 45px solid blueviolet;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .buttons {
