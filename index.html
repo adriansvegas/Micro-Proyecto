@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container"> <!--Contenedor principal que agrupa todo el contenido-->
         <h1>Simon Says</h1>
-        <div id="Menu">
+        <div id="Menu"> <!--Sección del menú principal-->
             <img src="Imgs/simon_dice.png" alt="simon_dice" class="side-image" />
             <input type="text" id="playerName" placeholder="Ingresa tu nombre" />
             <button id="startButton">Iniciar Juego</button>
-            <img src="Imgs/juego_memoria.jpg" alt="juego_memoria" class="side-image" />
-            <div id="scoreBoard">
+            <img src="Imgs/juego_memoria.png" alt="juego_memoria" class="side-image" />
+            <div id="scoreBoard"> <!--Sección para mostrar las puntuaciones-->
                 <h2>Puntuaciones</h2>
                 <div id="highScores"></div>
             </div>
         </div>
-        <div id="rules" class="hidden">
+        <div id="rules" class="hidden"><!--Sección de reglas del juego, inicialmente oculta -->
             <h2>Reglas del Juego</h2>
             <ul>
                 <li>El juego consiste en seguir la secuencia de colores que se muestra.</li>
@@ -29,7 +29,7 @@
             </ul>
         </div>
         <div id="game" class="hidden">
-            <div class="buttons">
+            <div class="buttons"> <!--Contenedor para los botones del juego-->
                 <div class="button red" data-color="red"></div>
                 <div class="button green" data-color="green"></div>
                 <div class="button blue" data-color="blue"></div>

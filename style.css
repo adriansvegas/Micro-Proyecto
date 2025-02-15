@@ -1,35 +1,51 @@
+/*Contenedor para los botones del juego*/
 body {
     font-family: 'Arial', sans-serif; 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e0f7fa; 
+    background-color: #27dff7; 
 }
 
+/*Estilos para el contenedor principal*/
 .container {
     text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 45px solid #0f0f0f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
+/*Estilos para la sección de botones */
 .buttons {
-    display: flex;
+    display: grid;
     justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
     margin: 20px 0;
-}
 
+}
+ 
+/* Estilos para cada botón*/
 .button {
-    width: 100px;
+    width: 100;
     height: 100px;
-    margin: 10px;
+    margin: 0px;
+    padding: auto;
     border-radius: 10px;
+    border: 10px solid #0f0f0f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    opacity: 0.7;
+    opacity: 0.6;
     transition: opacity 0.2s, transform 0.2s; /* Añadir transición para el efecto de pulsar */
 }
 
 .red { 
     background-color: #ff5252; /* Color rojo más suave */
 }
+
 
 .green { 
     background-color: #69f0ae; /* Color verde más suave */
@@ -66,6 +82,8 @@ body {
     width: 100px; /* Ajusta el tamaño según sea necesario */
     height: auto;
     margin: 10px;
+
+    background-color: transparent;
 }
 
 #rules {
