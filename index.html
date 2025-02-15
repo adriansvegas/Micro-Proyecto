@@ -1,42 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simons Says</title>
-    <link rel ="stylesheet" href="style.css">
+    <title>Simon Says</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1> Simons Says</h1>
+        <h1>Simon Says</h1>
         <div id="Menu">
-            <input type="text" id="playerName" placeholder="Ingresa tu nombre: " />
+            <img src="Imgs/simon_dice.png" alt="simon_dice" class="side-image" />
+            <input type="text" id="playerName" placeholder="Ingresa tu nombre" />
             <button id="startButton">Iniciar Juego</button>
+            <img src="Imgs/juego_memoria.jpg" alt="juego_memoria" class="side-image" />
             <div id="scoreBoard">
                 <h2>Puntuaciones</h2>
                 <div id="highScores"></div>
             </div>
         </div>
-        <div id="game" class="Escondido">
+        <div id="rules" class="hidden">
+            <h2>Reglas del Juego</h2>
+            <ul>
+                <li>El juego consiste en seguir la secuencia de colores que se muestra.</li>
+                <li>Haz clic en los botones en el mismo orden que se muestran.</li>
+                <li>Si cometes un error, el juego terminará y se mostrará tu puntuación.</li>
+                <li>Intenta obtener la mayor puntuación posible.</li>
+            </ul>
+        </div>
+        <div id="game" class="hidden">
             <div class="buttons">
-                <button class="button red" data-color="red">
-                    <img src="Imgs/boton_rojo.png" alt="Rojo"/>
-                </button>
-                <button class="button green" data-color="green">
-                    <img src="Imgs/boton_verde.png" alt="Verde"/>
-                </button>
-                <button class="button blue" data-color="blue">
-                    <img src="Imgs/boton_azul.png" alt="Azul"/>
-                </button>
-                <button class="button yellow" data-color="yellow">
-                    <img src="Imgs/boton_amarillo.png" alt="Amarillo"/>
-                </button>
+                <div class="button red" data-color="red"></div>
+                <div class="button green" data-color="green"></div>
+                <div class="button blue" data-color="blue"></div>
+                <div class="button yellow" data-color="yellow"></div>
             </div>
             <h2 id="currentScore">Puntuación: 0</h2>
-            <button id="restartButton" class="hidden">Reiniciar Juego</button>
+            <button id="restartButton">Reiniciar Juego</button>
         </div>
-        <img class="Imagen" id="Imagen" src="Imgs/Despedida.jpg">
     </div>
-    <script src="main.js"></script> 
+    <script src="main.js"></script>
 </body>
 </html>

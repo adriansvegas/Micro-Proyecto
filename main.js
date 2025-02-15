@@ -12,6 +12,8 @@ const currentScoreDisplay = document.getElementById('currentScore');
 const restartButton = document.getElementById('restartButton');
 const highScoresDisplay = document.getElementById('highScores');
 
+
+
 startButton.addEventListener('click', startGame);
 restartButton.addEventListener('click', restartGame);
 
@@ -23,9 +25,10 @@ function startGame() {
     }
     menuDiv.classList.add('hidden');
     gameDiv.classList.remove('hidden');
+    document.getElementById('rules').classList.remove('hidden'); 
     score = 0;
     sequence = [];
-    nextRound(); // Iniciar la primera ronda
+    nextRound(); 
 }
 
 function nextRound() {
@@ -34,6 +37,7 @@ function nextRound() {
     currentScoreDisplay.textContent = `Puntuación: ${score}`;
     const nextColor = colors[Math.floor(Math.random() * colors.length)];
     sequence.push(nextColor);
+    console.log("Secuencia actual:", sequence); 
     playSequence();
 }
 
@@ -119,4 +123,5 @@ function restartGame() {
     highScores = {};
     localStorage.removeItem('highScores');
     highScoresDisplay.innerHTML = '';
+    alert('El juego ha sido reiniciado.');
 }

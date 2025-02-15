@@ -1,58 +1,74 @@
 body {
-    background-color: #121111;
+    font-family: 'Arial', sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa; 
 }
 
-
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 8px;
-    border: 45px solid blueviolet;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 10px;
-    justify-content: center; 
-    margin-top: 20px; 
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .button {
-    width: 100px; 
-    height: 100px; 
-    margin: 10px; 
-    border: none; 
-    border-radius: 50%; 
-    cursor: pointer; 
-    background-color: transparent; 
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s, transform 0.2s; /* Añadir transición para el efecto de pulsar */
 }
 
-.button img {
-    width: 100%; 
-    height: 100%; 
-    border-radius: 50%; 
-    transition: transform 0.2s; 
+.red { 
+    background-color: #ff5252; /* Color rojo más suave */
 }
 
-.button:hover img {
-    transform: scale(1.1); }
-
-.button:active img {
-        filter: brightness(1.2);
-    }
-
-.Imagen{
-    width: 100%; 
-    height: 100%;
-    justify-content: center; 
-    align-items: center; 
-    border-radius: 20%; 
-    transition: transform 0.2s; 
+.green { 
+    background-color: #69f0ae; /* Color verde más suave */
 }
 
-.Imagen:hover img {
-    transform: scale(1.1); }
+.blue { 
+    background-color: #448aff; /* Color azul más suave */
+}
+
+.yellow { 
+    background-color: #ffff00; /* Color amarillo */
+}
+
+.button:hover {
+    opacity: 1;
+    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+}
+
+.hidden {
+    display: none;
+}
+
+#scoreBoard {
+    margin-top: 20px;
+}
+
+#currentScore {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #333; /* Color del texto del puntaje */
+}
+
+.side-image {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin: 10px;
+}
+
+#rules {
+    margin-top: 20px;
+    text-align: left; /* Alinear texto a la izquierda */
+}
