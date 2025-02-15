@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simons Says</title>
     <link rel ="stylesheet" href="style.css">
 </head>
@@ -8,40 +10,33 @@
     <div class="container">
         <h1> Simons Says</h1>
         <div id="Menu">
-            <input type="text" id="Player" placeholder="Ingresa tu nombre: " />
-            <button id="Start"> Iniciar Juego</button>
-        </div>
-        <div id="Juego" class="Escondido">
-            <h3> Juego prueba</h3>
-            <div class="buttons">
-                    <button class="button" id="red">
-                        <img src="Imgs/boton_rojo.png" alt="Rojo"/>
-                    </button>
-                    <button class="button" id="green">
-                        <img src="Imgs/boton_verde.png" alt="Verde"/>
-                    </button>
-                    <button class="button" id="blue">
-                        <img src="Imgs/boton_azul.png" alt="Azul"/>
-                    </button>
-                    <button class="button" id="yellow">
-                        <img src="Imgs/boton_amarillo.png" alt="Amarillo"/>
-                    </button>
-        </div>
-        <section>
-            <div id="Marcador">
-                <h2> Puntuacion: <span id="Marcador actual">0</span></h2>
-                <h2> Mejor Puntaje: <span id="Mejor Marcador">0</span></h2>
-                <h2> Victorias Acumuladas: <span id="Contador de Victorias">0</span></h2>
-                <button id="reinicio" class="Escondido"> Reiniciar Juego</button>
+            <input type="text" id="playerName" placeholder="Ingresa tu nombre: " />
+            <button id="startButton">Iniciar Juego</button>
+            <div id="scoreBoard">
+                <h2>Puntuaciones</h2>
+                <div id="highScores"></div>
             </div>
-        </section>
+        </div>
+        <div id="game" class="Escondido">
+            <div class="buttons">
+                <button class="button" id="red">
+                    <img src="Imgs/boton_rojo.png" alt="Rojo"/>
+                </button>
+                <button class="button" id="green">
+                    <img src="Imgs/boton_verde.png" alt="Verde"/>
+                </button>
+                <button class="button" id="blue">
+                    <img src="Imgs/boton_azul.png" alt="Azul"/>
+                </button>
+                <button class="button" id="yellow">
+                    <img src="Imgs/boton_amarillo.png" alt="Amarillo"/>
+                </button>
+            </div>
+            <h2 id="currentScore">Puntuación: 0</h2>
+            <button id="restartButton" class="hidden">Reiniciar Juego</button>
+        </div>
         <img class="Imagen" id="Imagen" src="Imgs/Despedida.jpg">
-
     </div>
-
+    <script src="main.js"></script> 
 </body>
-
-    
-</div>
-<script src="main.js"></script>
 </html>
