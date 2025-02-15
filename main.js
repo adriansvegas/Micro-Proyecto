@@ -25,7 +25,7 @@ function startGame() {
     gameDiv.classList.remove('hidden');
     score = 0;
     sequence = [];
-    nextRound(); 
+    nextRound(); // Iniciar la primera ronda
 }
 
 function nextRound() {
@@ -69,10 +69,39 @@ function enablePlayerInput() {
 }
 
 function handlePlayerClick(event) {
-    const color = event.target.dataset.color; 
+    const color = event.target.dataset.color; // Obtener el color del botón
     playerSequence.push(color);
     flashButton(color);
     checkPlayerSequence();
+}
+
+function checkPlayerSequence() {
+    const currentIndex = playerSequence.length - 1;
+    // Verificar si la última entrada del jugador es incorrecta
+    if (playerSequence[currentIndex] !== sequence[currentIndex]) {
+        alert('¡Juego terminado! Tu puntuación fue: ' + score);
+        saveHighScore();
+        resetGame();
+    } else if (playerSequence.length === sequence.length) {
+        console.log('Secuencia completada correctamente!');
+        // Si el jugador ha completado la secuencia correctamente
+        setTimeout(nextRound, 1000); // Esperar un segundo antes de la siguiente ronda
+    }
+}
+
+function saveHighScore() {
+    if (!highScores[playerName] || highScores[playerName] < score) {
+        highScores[playerName] = score;
+        localStorage.setItem('highScores', JSON.stringify(highScores));
+        displayHighScores();
+    }
+}
+
+function displayHighScores() {
+    highScoresDisplay.innerHTML = '';
+    for (const player in highScores) {
+        highScoresDisplay.innerHTML += `<p>${player}: ${highScores[player]}</p>`;
+    }
 }
 
 function resetGame() {
